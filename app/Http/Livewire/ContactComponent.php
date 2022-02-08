@@ -33,7 +33,7 @@ class ContactComponent extends Component
             'phone' => 'required|min:3',
             'message' => 'required|min:6',
         ]);
-        $email_address = "info@creativekiwi.nz";
+        $email_address = "info@bigypainting.com";
         Mail::to($email_address)->send(new MailContact($this->email,$this->name,$this->phone,$this->message));
         session()->flash('message', 'Enquiry has been sent successfully!');
     }
